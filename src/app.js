@@ -20,7 +20,7 @@ const appLoader = async(app) => {
 
     app.use(express.json())
     app.use(cors({
-        origin : config.client_url
+        origin : [config.client_url,config.hosted_client_url]
     }))
     app.use(express.urlencoded({ extended: true }));
 
